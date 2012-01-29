@@ -44,7 +44,10 @@ $(function() {
 			rules: {
 				number: { required: true, number: true, range: [100,200] },
 				date: { required: true, date: true },
-			}
+			},
+			submitHandler: function(form) {
+				alert("Form is valid!");
+ 		    }
 		}
 	);
 	
