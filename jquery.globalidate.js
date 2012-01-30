@@ -19,5 +19,6 @@ $.validator.methods.number = function (value, element) {
 }
 
 $.validator.methods.date = function (value, element) {
-	return this.optional(element) || (parsed = Globalize.parseDate(value) && parsed != null && !/Invalid|NaN/.test(parsed));
+	var parsed = Globalize.parseDate(value)
+	return this.optional(element) || (parsed != null && !/Invalid|NaN/.test(parsed));
 }
